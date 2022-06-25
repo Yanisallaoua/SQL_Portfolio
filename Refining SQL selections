@@ -1,0 +1,19 @@
+select distinct author_lname from books;
+
+select distinct author_lname, author_fname from books;
+
+select distinct concat(author_lname ,' ', author_fname) as 'full name' from books;
+
+select distinct concat(author_lname ,' ', author_fname) as 'full name' from books order by author_lname;
+
+select distinct concat(author_lname ,' ', author_fname) as 'full name' from books order by author_lname desc;
+
+select concat(title,' - ', released_year) as summary from books order by released_year desc limit 3;
+
+select title, author_lname from books where author_lname like '% %';
+
+select title, released_year, stock_quantity from books order by stock_quantity limit 3 ;
+
+select title, author_lname from books order by author_lname, title;
+
+select concat('my favourite author is ', author_fname,' ', author_lname, '!') as 'favourite author' from books;
